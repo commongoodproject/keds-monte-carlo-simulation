@@ -1,8 +1,8 @@
 Common Good Paradigm: Dynamic Monte Carlo Simulation
 This repository contains a stochastic Monte Carlo simulation framework (N=1,000 agents, 12–24 month tracking period) developed to evaluate the systemic cumulative costs and KEDS (Karolinska Exhaustion Disorder Scale) cognitive friction of modern Finnish employment service reforms.
 
-🚀 Interactive Dashboard
-The simulation is live and accessible in your browser:
+🚀 Access the Simulator
+The interactive simulation dashboard is live and accessible in your browser:
 👉 https://commongoodproject.github.io/keds-monte-carlo-simulation/
 
 Abstract & The Core Anomaly
@@ -30,3 +30,4 @@ Peer Review Request
 The simulation logic, statistical baseline parameters, and raw data are published here for open scrutiny. If you identify logical errors, wish to calibrate parameters, or propose alternative models, pull requests and issue reports are highly encouraged.
 
 Data sources: THL, Kela statistical yearbooks, SOSTE, Karolinska Institutet KEDS validation studies, Finnish Government Proposal HE 108/2025.
+This project is part of the "Common Good Project" infrastructure.

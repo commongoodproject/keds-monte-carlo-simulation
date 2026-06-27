@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dynaaminen Monte Carlo -simulaattori työllisyystoimista, mielenterveydestä (KEDS) ja yhteiskunnallisista kerrannaisvaikutuksista. Vertailussa Nykymalli ja Common Good.">
-    <title>Inhimillinen Työllisyys & Mielenterveys: Monte Carlo -Simulaattori</title>
+    <meta name="description" content="Dynamic Monte Carlo simulator for employment interventions, mental health (KEDS) and societal spillover effects. Compares Current Model and Common Good (Sandbox).">
+    <title>Human Employment & Mental Health: Monte Carlo Simulator</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +22,19 @@
         <div class="logo-area">
             <span class="icon-pulse"><i class="fa-solid fa-brain-circuit"></i></span>
             <div class="title-group">
-                <h1>Inhimillinen Työllisyys & Yhteiskunta</h1>
-                <p class="subtitle">Monte Carlo -pohjainen dynaaminen kerrannaisvaikutusten simulaattori</p>
+                <h1>Human Employment & Society</h1>
+                <p class="subtitle">Monte Carlo-based dynamic spillover effects simulator</p>
             </div>
         </div>
         <div class="header-stats" style="align-items: center;">
-            <button id="open-manifesti-btn" class="btn secondary-btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fa-solid fa-file-invoice"></i> Lue Manifesti</button>
+            <button id="open-manifesti-btn" class="btn secondary-btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fa-solid fa-file-invoice"></i> Read Manifesto</button>
             <div class="h-stat-box">
-                <span class="lbl">Hallituksen Tavoite</span>
-                <span class="val pulse">80% <small>Työllisyys</small></span>
+                <span class="lbl">Government Target</span>
+                <span class="val pulse">80% <small>Employment</small></span>
             </div>
             <div class="h-stat-box">
-                <span class="lbl">Suomalaisten Stressitaso</span>
-                <span class="val danger">88% <small>Kokeillaan</small></span>
+                <span class="lbl">Population Stress Level</span>
+                <span class="val danger">88% <small>Example</small></span>
             </div>
         </div>
     </header>
@@ -42,17 +42,17 @@
     <main class="main-layout">
         <!-- LEFT COLUMN: CONTROL PANEL -->
         <section class="control-panel glass-panel">
-            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Simulaation Ohjaus</h2>
-            <p class="section-desc">Säädä järjestelmätason muuttujia nähdäksesi, miten dynaamiset kerrannaisvaikutukset muuttuvat Monte Carlo -mallissa.</p>
+            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Simulation Controls</h2>
+            <p class="section-desc">Adjust system-level variables to see how dynamic spillover effects change in the Monte Carlo model.</p>
 
             <form id="simulator-form" onsubmit="return false;">
                 <!-- POPULATION & RUNS -->
                 <div class="control-group">
-                    <h3 class="group-title"><i class="fa-solid fa-users-gear"></i> Simulaation Asetukset</h3>
+                    <h3 class="group-title"><i class="fa-solid fa-users-gear"></i> Simulation Settings</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="pop-size">Populaation koko (Yksilöt)</label>
+                            <label for="pop-size">Population size (individuals)</label>
                             <span class="slider-val" id="pop-size-val">1000</span>
                         </div>
                         <input type="range" id="pop-size" min="100" max="2500" step="100" value="1000">
@@ -60,20 +60,20 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="sim-months">Seuranta-aika (Kuukautta)</label>
+                            <label for="sim-months">Follow-up period (months)</label>
                             <span class="slider-val" id="sim-months-val">12</span>
                         </div>
                         <input type="range" id="sim-months" min="6" max="24" step="1" value="12">
                     </div>
                 </div>
 
-                <!-- NYKYMALLIN PARAMETRIT -->
+                <!-- CURRENT MODEL PARAMETERS -->
                 <div class="control-group danger-border">
-                    <h3 class="group-title danger-text"><i class="fa-solid fa-building-columns"></i> Nykymalli (Sanktiot & Pakko)</h3>
+                    <h3 class="group-title danger-text"><i class="fa-solid fa-building-columns"></i> Current Model (Sanctions & Compulsion)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="sanction-rate">Sanktion taso (Leikkaus perusosaan)</label>
+                            <label for="sanction-rate">Sanction level (cut to basic benefit)</label>
                             <span class="slider-val" id="sanction-rate-val">50%</span>
                         </div>
                         <input type="range" id="sanction-rate" min="20" max="50" step="5" value="50">
@@ -81,7 +81,7 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="bureaucracy-cost">Byrokratia / Hakemus (Hallintokulu)</label>
+                            <label for="bureaucracy-cost">Bureaucracy / Application cost (admin cost)</label>
                             <span class="slider-val" id="bureaucracy-cost-val">45 €</span>
                         </div>
                         <input type="range" id="bureaucracy-cost" min="10" max="150" step="5" value="45">
@@ -89,20 +89,20 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="suojaosa-removed">Suojaosan (150 €) poistovaikutus</label>
-                            <span class="slider-val" id="suojaosa-removed-val">Erittäin korkea</span>
+                            <label for="suojaosa-removed">Effect of removing protective allowance (150 €)</label>
+                            <span class="slider-val" id="suojaosa-removed-val">Very high</span>
                         </div>
                         <input type="range" id="suojaosa-removed" min="1" max="3" step="1" value="3">
                     </div>
                 </div>
 
-                <!-- COMMON GOOD PARAMETRIT -->
+                <!-- COMMON GOOD PARAMETERS -->
                 <div class="control-group success-border">
-                    <h3 class="group-title success-text"><i class="fa-solid fa-hands-holding-child"></i> Common Good (Joustava Sandbox)</h3>
+                    <h3 class="group-title success-text"><i class="fa-solid fa-hands-holding-child"></i> Common Good (Flexible Sandbox)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="match-rate">Osaamisen osuma-aste (Skills Match)</label>
+                            <label for="match-rate">Skills match rate</label>
                             <span class="slider-val" id="match-rate-val">95%</span>
                         </div>
                         <input type="range" id="match-rate" min="60" max="100" step="5" value="95">
@@ -110,35 +110,35 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="reward-level">Täsmäpalkinnon keskiarvo (Credit reward)</label>
+                            <label for="reward-level">Average credit reward</label>
                             <span class="slider-val" id="reward-level-val">120 €</span>
                         </div>
                         <input type="range" id="reward-level" min="40" max="300" step="10" value="120">
                     </div>
                 </div>
 
-                <!-- YHTEISKUNNALLISET KRIISIKUSTANNUKSET -->
+                <!-- SOCIETAL CRISIS COSTS -->
                 <div class="control-group warning-border">
-                    <h3 class="group-title warning-text"><i class="fa-solid fa-triangle-exclamation"></i> Kerrannaiskustannukset (Kriisit)</h3>
+                    <h3 class="group-title warning-text"><i class="fa-solid fa-triangle-exclamation"></i> Spillover costs (crises)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="crisis-cost-heavy">Syrjäytyneen yksilön kerrannaiskulut</label>
-                            <span class="slider-val" id="crisis-cost-heavy-val">1 000 000 €</span>
+                            <label for="crisis-cost-heavy">Spillover cost per deeply excluded individual</label>
+                            <span class="slider-val" id="crisis-cost-heavy-val">1,000,000 €</span>
                         </div>
                         <input type="range" id="crisis-cost-heavy" min="200000" max="1500000" step="100000" value="1000000">
                     </div>
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="housing-crisis-cost">Häädöt & Akuutit kriisikulut</label>
-                            <span class="slider-val" id="housing-crisis-cost-val">18 000 €</span>
+                            <label for="housing-crisis-cost">Evictions & acute crisis cost</label>
+                            <span class="slider-val" id="housing-crisis-cost-val">18,000 €</span>
                         </div>
                         <input type="range" id="housing-crisis-cost" min="5000" max="40000" step="1000" value="18000">
                     </div>
                 </div>
 
-                <button id="run-simulation-btn" class="btn primary-btn"><i class="fa-solid fa-play"></i> Aja Monte Carlo -Simulaatio</button>
+                <button id="run-simulation-btn" class="btn primary-btn"><i class="fa-solid fa-play"></i> Run Monte Carlo Simulation</button>
             </form>
         </section>
 
@@ -147,21 +147,21 @@
             
             <!-- STATS COUNTERS -->
             <section class="stats-grid">
-                <!-- NYKYMALLI SUMMARY -->
+                <!-- CURRENT MODEL SUMMARY -->
                 <div class="summary-card danger-card glass-panel">
                     <div class="card-header">
-                        <h3>Nykymalli (Byrokratia & Sanktiot)</h3>
-                        <span class="badge badge-danger">Sanktiokeskeinen</span>
+                        <h3>Current Model (Bureaucracy & Sanctions)</h3>
+                        <span class="badge badge-danger">Sanction-focused</span>
                     </div>
                     <div class="main-metrics">
                         <div class="metric">
-                            <span class="val-lbl">Yhteiskunnan nettovaste</span>
-                            <span class="val text-danger" id="model1-net-cost">Lasketaan...</span>
+                            <span class="val-lbl">Net societal outcome</span>
+                            <span class="val text-danger" id="model1-net-cost">Calculating...</span>
                         </div>
                         <div class="metric-sub">
-                            <div>Uupuneet (KEDS > 19): <strong id="model1-exhausted">0%</strong></div>
-                            <div>Kriisitilanteet (häätö ym.): <strong id="model1-crises">0 kpl</strong></div>
-                            <div>Köyhyysvaje (Poverty Gap): <strong id="model1-poverty">0%</strong></div>
+                            <div>Exhausted (KEDS > 19): <strong id="model1-exhausted">0%</strong></div>
+                            <div>Crises (evictions etc.): <strong id="model1-crises">0 pcs</strong></div>
+                            <div>Poverty gap: <strong id="model1-poverty">0%</strong></div>
                         </div>
                     </div>
                 </div>
@@ -169,18 +169,18 @@
                 <!-- COMMON GOOD SUMMARY -->
                 <div class="summary-card success-card glass-panel">
                     <div class="card-header">
-                        <h3>Common Good -malli (Osaamissandbox)</h3>
-                        <span class="badge badge-success">Smaragdi Sandbox</span>
+                        <h3>Common Good model (Skills Sandbox)</h3>
+                        <span class="badge badge-success">Smaragd Sandbox</span>
                     </div>
                     <div class="main-metrics">
                         <div class="metric">
-                            <span class="val-lbl">Yhteiskunnan nettovaste</span>
-                            <span class="val text-success" id="model2-net-cost">Lasketaan...</span>
+                            <span class="val-lbl">Net societal outcome</span>
+                            <span class="val text-success" id="model2-net-cost">Calculating...</span>
                         </div>
                         <div class="metric-sub">
-                            <div>Uupuneet (KEDS > 19): <strong id="model2-exhausted">0%</strong></div>
-                            <div>Kriisitilanteet (minimoitu): <strong id="model2-crises">0 kpl</strong></div>
-                            <div>Köyhyysvajeen poisto: <strong id="model2-poverty-reduction">0%</strong></div>
+                            <div>Exhausted (KEDS > 19): <strong id="model2-exhausted">0%</strong></div>
+                            <div>Crises (minimized): <strong id="model2-crises">0 pcs</strong></div>
+                            <div>Poverty gap reduction: <strong id="model2-poverty-reduction">0%</strong></div>
                         </div>
                     </div>
                 </div>
@@ -189,13 +189,13 @@
             <!-- CHARTS GRID -->
             <section class="charts-grid">
                 <div class="chart-card glass-panel">
-                    <h3><i class="fa-solid fa-chart-line"></i> Kumulatiiviset kokonaiskustannukset yhteiskunnalle (€)</h3>
+                    <h3><i class="fa-solid fa-chart-line"></i> Cumulative total costs to society (€)</h3>
                     <div class="chart-container">
                         <canvas id="costChart"></canvas>
                     </div>
                 </div>
                 <div class="chart-card glass-panel">
-                    <h3><i class="fa-solid fa-chart-bar"></i> Mielenterveys vs. Työllistymisvauhti (KEDS-kehitys)</h3>
+                    <h3><i class="fa-solid fa-chart-bar"></i> Mental health vs. Employment pace (KEDS development)</h3>
                     <div class="chart-container">
                         <canvas id="kedsChart"></canvas>
                     </div>
@@ -205,15 +205,15 @@
             <!-- AGENT STORY LOGS -->
             <section class="agent-story-section glass-panel">
                 <div class="story-header">
-                    <h3><i class="fa-solid fa-receipt"></i> Yksilötason dynaaminen Monte Carlo -inspektori</h3>
-                    <button id="inspect-agent-btn" class="btn secondary-btn"><i class="fa-solid fa-arrows-rotate"></i> Seuraa uutta yksilöä</button>
+                    <h3><i class="fa-solid fa-receipt"></i> Individual-level dynamic Monte Carlo inspector</h3>
+                    <button id="inspect-agent-btn" class="btn secondary-btn"><i class="fa-solid fa-arrows-rotate"></i> Inspect a new individual</button>
                 </div>
                 <div class="story-grid">
                     <div class="agent-profile">
                         <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
                         <div class="profile-details">
-                            <h4 id="agent-type-name">Ladataan agenttia...</h4>
-                            <p id="agent-init-desc">Napsauta simulaation käynnistystä nähdäksesi yksilön tarinan.</p>
+                            <h4 id="agent-type-name">Loading agent...</h4>
+                            <p id="agent-init-desc">Click to run the simulation and see an individual's story.</p>
                             <div class="skills-chips" id="agent-skills-chips">
                                 <!-- Chips inject dynamically -->
                             </div>
@@ -222,16 +222,16 @@
                     <div class="story-comparison">
                         <!-- Model 1 story -->
                         <div class="story-col m1-story">
-                            <h5>Nykymallin Elämänpolku</h5>
+                            <h5>Life path under Current Model</h5>
                             <ul class="timeline-logs" id="model1-logs">
-                                <li>Odottaa simulaation ajoa...</li>
+                                <li>Waiting for simulation...</li>
                             </ul>
                         </div>
                         <!-- Model 2 story -->
                         <div class="story-col m2-story">
-                            <h5>Common Good -Elämänpolku</h5>
+                            <h5>Life path under Common Good</h5>
                             <ul class="timeline-logs" id="model2-logs">
-                                <li>Odottaa simulaation ajoa...</li>
+                                <li>Waiting for simulation...</li>
                             </ul>
                         </div>
                     </div>
@@ -240,93 +240,91 @@
         </div>
     </main>
 
-    <!-- MANIFESTI / FAQ MODAL -->
+    <!-- MANIFESTO / FAQ MODAL -->
     <div id="manifesti-modal" class="modal-overlay">
         <div class="modal-content glass-panel">
             <div class="modal-header">
-                <h2><i class="fa-solid fa-graduation-cap"></i> Paradigman Muutos: Rangaistuksesta Common Goodiin</h2>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Paradigm Shift: From Punishment to Common Good</h2>
                 <button id="close-manifesti-btn" class="close-btn">&times;</button>
             </div>
             <div class="modal-body">
-                <h3>1. Johdanto: Miksi yhteiskuntapelin säännöt on päivitettävä?</h3>
-                <p>Nykyinen yhteiskunnallinen tukijärjestelmämme on ajautunut tilaan, jossa se kuluttaa enemmän energiaa kontrolliin kuin varsinaiseen auttamiseen. Tämä "hallinnollinen musta aukko" ei ainoastaan uuvuta yksilöitä, vaan se on myös taloudellisesti kestämätön. Olemme pisteessä, jossa meidän on valittava kahden tien välillä: jatkammeko kalliin ja tehottoman rangaistusbyrokratian tiellä, vai siirrymmekö <strong>Common Good -malliin</strong>, jossa keskiössä on <strong>yksilön kukoistus</strong> ja resurssien älykäs optimointi.</p>
-                <p>Tämä muutos ei ole pelkkää idealismia, vaan matemaattinen välttämättömyys. Monte Carlo -simulaatiot paljastavat karun totuuden: nykyisen sanktiokeskeisen mallin kerrannaiskustannukset nousevat tarkastelupopulaatiossa noin <strong>27,7 miljoonaan euroon</strong>, kun taas Common Good -malli pudottaa kustannukset murto-osaan, noin <strong>4,5 miljoonaan euroon</strong>. Kyse on systeemisen hukkaenergian poistamisesta ja inhimillisen potentiaalin vapauttamisesta.</p>
+                <h3>1. Introduction: Why update the rules of the social game?</h3>
+                <p>Our current social support architecture spends more energy on control than on meaningful help. This bureaucratic overhead often undermines people's ability to regain sustainable livelihoods.</p>
+                <p>This change is not mere idealism but an economic necessity. Monte Carlo simulations reveal a stark truth: sanction-driven models produce large societal spillover costs compared to enabling alternatives.</p>
 
-                <h3>2. Nykyjärjestelmä: "Musta laatikko" ja rangaistuksen ilmapiiri</h3>
-                <p>Nykyinen byrokraattinen rakennelma toimii "mustan laatikon" tavoin: päätöksenteko on kasvotonta, ennakoimatonta ja perustuu usein virkamiesmäiseen mutu-ajatteluun. Lähteiden valossa järjestelmän valuvirheet ovat musertavia:</p>
+                <h3>2. The current system: "Black box" and punitive atmosphere</h3>
+                <p>The current bureaucratic setup functions like a black box: decisions are impersonal, unpredictable, and frequently based on ad-hoc judgments rather than transparent data.</p>
                 <ul>
-                    <li><strong>Blackbox-metodi ja hallinnollinen mielivalta:</strong> Päätökset tehdään suljettujen ovien takana ilman aitoa ymmärrystä yksilön elämäntilanteesta. Tämä johtaa absurdeihin "kaikille sama" -ratkaisuihin.</li>
-                    <li><strong>Uhkajärjestelmän biologia:</strong> Pakko ja neljän työpaikan kuukausittainen hakuvelvoite aktivoivat ihmisen biologisen <em>uhkajärjestelmän</em> (threat system). Kun ihminen kokee jatkuvaa pelkoa toimeentulon menetyksestä, aivojen prefrontaalinen aivokuori – eli loogisen ajattelun ja luovuuden keskus – kirjaimellisesti lamaantuu. Kun <strong>KEDS-pisteet ylittävät kynnyksen 19</strong>, ihminen ei ole laiska, vaan hänen biologinen toimintakykynsä on vaurioitunut.</li>
-                    <li><strong>Resurssihukka:</strong> Jopa <strong>90 % hakijan voimavaroista kuluu byrokraattisessa prosessissa selviytymiseen</strong> varsinaisen työnhaun tai osaamisen kehittämisen sijaan. Tämä tuottaa turhaa kohinaa työmarkkinoille, uuvuttaa HR-osastot ja maksaa yhteiskunnalle miljoonia kerrannaiskustannuksina.</li>
+                    <li><strong>Black-box decision making:</strong> Choices are made behind closed doors without a genuine understanding of individuals' life situations.</li>
+                    <li><strong>Threat-based psychology:</strong> Compulsion and punitive measures activate people's biological threat system, increasing stress and impairing motivation.</li>
+                    <li><strong>Resource waste:</strong> Up to 90% of applicants' energy can be consumed by administrative survival rather than skill development or job search.</li>
                 </ul>
 
-                <h3>3. Common Good ja "Skills-ajattelu": Ihmisestä yhteiskunnan agentiksi</h3>
-                <p>Common Good -paradigmassa ihminen nähdään voimavarana, ei kulueränä. Järjestelmä muuttuu kontrolliarkkitehtuurista mahdollistavaksi verkostoksi.</p>
-                <p><em>"Uusi malli ei pakota, ei vaadi, ei alista. Se on mahdollistava, innostava ja ihmisen yhteiskuntaan helposti integroiva metodi, joka perustuu vapaaehtoisuuteen ja itsetuntemukseen."</em></p>
+                <h3>3. Common Good and skills thinking: People as societal agents</h3>
+                <p>The Common Good paradigm treats individuals as assets, not costs. The system becomes an enabling network rather than an architecture of control.</p>
                 <ul>
-                    <li><strong>Agenttipohjaisuus:</strong> Yksilö on aktiivinen "yhteiskunnan agentti", jonka toimintaa ohjaa <em>Intrinsic Motivation Scalar (IMS)</em> eli sisäinen motivaatio ulkoisen pakon sijaan. Agentti määrittää itse omat voimavaransa ja osallistumisensa tason.</li>
-                    <li><strong>Skills-malli:</strong> Osaamista ei kahlita staattisiin tutkintotodistuksiin. Tekoälyavusteiset profiilit tunnistavat "mikrotoiminnot" ja elämänkokemuksen tuottamat taidot (kuten monilapsisen arjen hallinnan pedagogiset taidot).</li>
-                    <li><strong>Täsmäpalkinnot:</strong> Kankeat maksusitoumukset korvataan krediiteillä, jotka vastaavat agentin todellisiin tarpeisiin. Agentti voi kuitata suoraan esimerkiksi sähkölaskunsa tekemällään yhteiskunnallisesti hyödyllisellä työllä.</li>
+                    <li><strong>Agent-based approach:</strong> Individuals act as active societal agents guided by intrinsic motivation.</li>
+                    <li><strong>Skills-first model:</strong> Recognition is based on micro-skills and lived experience rather than rigid formal degrees.</li>
+                    <li><strong>Targeted rewards:</strong> Replace blunt cash cuts with credits that match an individual's real needs (e.g. childcare, transport vouchers).</li>
                 </ul>
 
-                <h3>4. Vertailuanalyysi: Vanha vs. Uusi järjestelmä</h3>
+                <h3>4. Comparative analysis: Old vs. New system</h3>
                 <div class="table-container">
                     <table class="modal-table">
                         <thead>
                             <tr>
-                                <th>Dimensio</th>
-                                <th>Nykyinen rangaistusbyrokratia</th>
-                                <th>Common Good -paradigma</th>
+                                <th>Dimension</th>
+                                <th>Current punitive bureaucracy</th>
+                                <th>Common Good paradigm</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Ohjausmetodi</strong></td>
-                                <td>Pakko ja rangaistuksen uhka</td>
-                                <td>Vapaaehtoisuus ja mahdollistaminen</td>
+                                <td><strong>Guidance</strong></td>
+                                <td>Compulsion and threat of punishment</td>
+                                <td>Voluntary participation and enabling support</td>
                             </tr>
                             <tr>
-                                <td><strong>Osaamisen tunnistus</strong></td>
-                                <td>Viralliset tutkinnot ja kaavamaisuus</td>
-                                <td>Skills-ajattelu ja mikroprofiilit</td>
+                                <td><strong>Skills recognition</strong></td>
+                                <td>Formal qualifications and rigid procedures</td>
+                                <td>Skills thinking and micro-profiles</td>
                             </tr>
                             <tr>
-                                <td><strong>Päätöksenteko</strong></td>
-                                <td>Kasvoton "Blackbox" ja mutu</td>
-                                <td>Avoimen lähdekoodin data ja läpinäkyvyys</td>
+                                <td><strong>Decision making</strong></td>
+                                <td>Opaque "black box" decisions</td>
+                                <td>Open-data, transparent processes</td>
                             </tr>
                             <tr>
-                                <td><strong>Psykologinen vaikutus</strong></td>
-                                <td>Häpeä, uupumus (KEDS &ge; 19)</td>
-                                <td>Innostus, pystyvyys ja "Logic Mode"</td>
+                                <td><strong>Psychological effect</strong></td>
+                                <td>Shame, exhaustion (KEDS ≥ 19)</td>
+                                <td>Motivation, empowerment and constructive pathways</td>
                             </tr>
                             <tr>
-                                <td><strong>Taloudellinen vaikutus</strong></td>
-                                <td>Suuret kerrannaiskulut (27,7 M€)</td>
-                                <td>Resurssien täsmäkohdennus (4,5 M€)</td>
+                                <td><strong>Economic effect</strong></td>
+                                <td>Large spillover costs (e.g. 27.7 M€)</td>
+                                <td>Targeted resource allocation (e.g. 4.5 M€)</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h3>5. Case-esimerkki: Puusepän piilevä potentiaali</h3>
-                <p>Miten systeeminen muutos muuttaa yhden ihmisen elämänpolun? Tarkastellaan puuseppää, jonka fyysinen terveys on pettänyt:</p>
+                <h3>5. Case example: The hidden potential of a carpenter</h3>
+                <p>How does system change alter one person's life path? Consider a carpenter whose physical capacity has diminished:</p>
                 <ul>
-                    <li><strong>Nykymalli:</strong> Puuseppä ei kykene nostamaan painoja. Järjestelmä diagnosoi hänet työkyvyttömäksi, ohjaa sairaseläkkeelle ja leimaa hänet "kulueräksi". Status murenee, prefrontaalinen aivokuori siirtyy uhkatilaan, ja arvokas kokemus valuu hukkaan.</li>
-                    <li><strong>Common Good -malli:</strong> Järjestelmä ei tuijota vain menetettyä fyysistä kykyä. Agentin <em>Skills-profiili</em> tunnistaa, että seitsemän lapsen kasvattaminen ja vuosikymmenten työkokemus ovat kerryttäneet huomattavaa pedagogista ja ohjauksellista pääomaa.</li>
-                    <li><strong>Tekoälyavusteinen kohtaanto:</strong> Järjestelmä löytää agentille <strong>98 % osuma-asteen</strong> nuorten työpajan ohjaustehtävään. Puuseppä integroituu takaisin yhteiskunnan aktiiviseksi agentiksi.</li>
+                    <li><strong>Current model:</strong> Diagnosed as unable to work, directed to permanent disability benefits and treated as a cost.</li>
+                    <li><strong>Common Good model:</strong> The skills profile recognizes transferable abilities (mentoring, design, small-scale production) and connects the individual to roles that match those strengths.</li>
+                    <li><strong>AI-assisted matching:</strong> The system finds a 98% match to a youth workshop instructor role. The carpenter regains purpose and income.</li>
                 </ul>
 
-                <h3>6. Systeeminen "Winner-Winner": Kenelle ja miksi?</h3>
-                <p>Common Good -malli luo poikkeuksellisen "Triple Win" -tilanteen:</p>
+                <h3>6. Systemic "Winner-Winner": Who benefits and why?</h3>
                 <ul>
-                    <li><strong>Yksilölle:</strong> Häpeäindeksi minimoituu ja motivaatio maksimoituu. Kun järjestelmä on "non-punitive" (ei-rankaiseva), yksilö voi toimia huippupotentiaalissaan ilman lamaannuttavaa stressiä.</li>
-                    <li><strong>Yrityksille:</strong> Työnantajat pääsevät käsiksi aitoon osaamiseen ilman pakotettujen hakemusten tuottamaa hälyä. Match-rate nousee.</li>
-                    <li><strong>Yhteiskunnalle:</strong> Resurssien käyttötehokkuus kasvaa 90 %. Kun vältämme häädöt, nälän ja mielenterveyskriisit, säästämme miljoonia euroja. Hyväntekeväisyys muuttuu kaksisuuntaiseksi arvonluonniksi.</li>
+                    <li><strong>Individuals:</strong> Reduced shame and higher motivation — a non-punitive system unlocks potential.</li>
+                    <li><strong>Employers:</strong> Access to genuine skills without sifting through coerced applications.</li>
+                    <li><strong>Society:</strong> Resource efficiency improves dramatically when evictions, hunger, and mental health crises are avoided.</li>
                 </ul>
 
-                <h3>7. Loppupäätelmä: Kohti "Unity"-ajattelua</h3>
-                <p>Common Good -malli on enemmän kuin byrokratian kevennys; se on siirtymä kohti <strong>Unity-ajattelua</strong>. Tässä visiossa yhteiskunta ja yksilö eivät ole vastakkainasettelussa, vaan muodostavat yhtenäisen, resiliantin kokonaisuuden. Järjestelmän perustuminen <strong>avoimeen lähdekoodiin</strong> ja radikaaliin läpinäkyvyyteen on ratkaisevaa. Kun yhteiskunnan "käyttöjärjestelmä" on avoin, luottamus kasvaa ja petosten tarve katoaa – ihminen ei huijaa järjestelmää, joka palvelee hänen aitoja täsmätarpeitaan.</p>
+                <h3>7. Conclusion: Toward unity thinking</h3>
+                <p>The Common Good model is more than bureaucracy lightening; it is a shift toward unity thinking where society and individual thrive together.</p>
             </div>
         </div>
     </div>

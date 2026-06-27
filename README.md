@@ -1,3 +1,4 @@
+![Uploading Screenshot 2026-06-27 at 22.51.05.png…]()
 # The Common Good: Questioning the Math of Reform
 
 I was looking at the government's recent employment reforms (HE 108/2025), and I couldn't make the numbers add up. It felt like the math was missing something fundamental.

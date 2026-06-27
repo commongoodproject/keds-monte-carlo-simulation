@@ -1,4 +1,3 @@
-![Uploading Screenshot 2026-06-27 at 22.51.05.png…]()
 # The Common Good: Questioning the Math of Reform
 
 I was looking at the government's recent employment reforms (HE 108/2025), and I couldn't make the numbers add up. It felt like the math was missing something fundamental.
@@ -10,7 +9,7 @@ I ran the numbers for the government's sanction-based model, and the story remai
 ## 🚀 Interactive Dashboard
 
 I've deployed the simulation so you can run the scenarios yourself:
-👉 CLICK HERE TO ACCESS THE SIMULATOR
+👉 https://commongoodproject.github.io/keds-monte-carlo-simulation/
 
 ## The Two Realities
 

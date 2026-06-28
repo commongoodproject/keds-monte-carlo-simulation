@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dynamic Monte Carlo simulator for employment interventions, mental health (KEDS) and societal spillover effects. Compares Current Model and Common Good (Sandbox) approaches. Verified by RUXI.">
-    <title>Human Employment & Mental Health: Monte Carlo Simulator</title>
+    <meta name="description" content="An advanced Monte Carlo simulation platform analyzing the socio-economic and mental health impacts of employment interventions. This simulator rigorously compares the traditional 'Current Model' (sanction-based) with the innovative 'Common Good' (adaptive sandbox) approach, quantifying societal spillover effects. Independently verified by RUXI for methodological integrity and data fidelity.">
+    <title>Human Capital & Societal Resilience: Advanced Monte Carlo Simulation</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,51 +22,51 @@
         <div class="logo-area">
             <span class="icon-pulse"><i class="fa-solid fa-brain-circuit"></i></span>
             <div class="title-group">
-                <h1>Human Employment & Society</h1>
-                <p class="subtitle">Monte Carlo-based dynamic spillover effects simulator</p>
+                <h1>Human Capital & Societal Resilience</h1>
+                <p class="subtitle">Dynamic Monte Carlo Simulator for Policy Impact Analysis</p>
             </div>
         </div>
         <div class="header-stats" style="align-items: center;">
-            <button id="open-manifesti-btn" class="btn secondary-btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fa-solid fa-file-invoice"></i> Read Manifesto</button>
+            <button id="open-manifesti-btn" class="btn secondary-btn" style="width: auto; padding: 0.5rem 1rem; font-size: 0.85rem;"><i class="fa-solid fa-file-invoice"></i> Access Policy Manifesto</button>
             <div class="h-stat-box">
-                <span class="lbl">Government Target</span>
-                <span class="val pulse">80% <small>Employment</small></span>
+                <span class="lbl">National Employment Target</span>
+                <span class="val pulse">80% <small>Attainment Goal</small></span>
             </div>
             <div class="h-stat-box">
-                <span class="lbl">Population Stress Level</span>
-                <span class="val danger">88% <small>Example</small></span>
+                <span class="lbl">Population Stress Index</span>
+                <span class="val danger">88% <small>Current Baseline</small></span>
             </div>
         </div>
         <!-- RUXI Verified Badge -->
-        <div class="ruxi-badge" title="Verified simulation and audit">
+        <div class="ruxi-badge" title="Methodological integrity and simulation audit verified by RUXI.">
             <i class="fa-solid fa-certificate"></i>
-            <span class="badge-text">Verified</span>
+            <span class="badge-text">RUXI Verified</span>
         </div>
     </header>
 
     <main class="main-layout">
         <!-- LEFT COLUMN: CONTROL PANEL -->
         <section class="control-panel glass-panel">
-            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Simulation Controls</h2>
-            <p class="section-desc">Adjust system-level variables to see how dynamic spillover effects change in the Monte Carlo model.</p>
+            <h2 class="section-title"><i class="fa-solid fa-sliders"></i> Simulation Parameter Configuration</h2>
+            <p class="section-desc">Fine-tune system-level variables to observe emergent dynamic spillover effects within the Monte Carlo model, influencing socio-economic and mental health outcomes.</p>
 
             <form id="simulator-form" onsubmit="return false;">
                 <!-- POPULATION & RUNS -->
                 <div class="control-group">
-                    <h3 class="group-title"><i class="fa-solid fa-users-gear"></i> Simulation Settings</h3>
+                    <h3 class="group-title"><i class="fa-solid fa-users-gear"></i> Core Simulation Settings</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="pop-size">Population size (individuals)</label>
-                            <span class="slider-val" id="pop-size-val">1000</span>
+                            <label for="pop-size">Simulated Population Cohort Size</label>
+                            <span class="slider-val" id="pop-size-val">1000 Individuals</span>
                         </div>
                         <input type="range" id="pop-size" min="100" max="2500" step="100" value="1000">
                     </div>
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="sim-months">Follow-up period (months)</label>
-                            <span class="slider-val" id="sim-months-val">12</span>
+                            <label for="sim-months">Longitudinal Follow-up Period</label>
+                            <span class="slider-val" id="sim-months-val">12 Months</span>
                         </div>
                         <input type="range" id="sim-months" min="6" max="24" step="1" value="12">
                     </div>
@@ -74,11 +74,11 @@
 
                 <!-- CURRENT MODEL PARAMETERS -->
                 <div class="control-group danger-border">
-                    <h3 class="group-title danger-text"><i class="fa-solid fa-building-columns"></i> Current Model (Sanctions & Compulsion)</h3>
+                    <h3 class="group-title danger-text"><i class="fa-solid fa-building-columns"></i> Current Bureaucratic Model (Sanctions & Compulsion)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="sanction-rate">Sanction level (cut to basic benefit)</label>
+                            <label for="sanction-rate">Sanction Severity (Reduction in Basic Benefit)</label>
                             <span class="slider-val" id="sanction-rate-val">50%</span>
                         </div>
                         <input type="range" id="sanction-rate" min="20" max="50" step="5" value="50">
@@ -86,16 +86,16 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="bureaucracy-cost">Bureaucracy / Application cost (admin cost)</label>
-                            <span class="slider-val" id="bureaucracy-cost-val">45 €</span>
+                            <label for="bureaucracy-cost">Administrative Overhead & Application Burden</label>
+                            <span class="slider-val" id="bureaucracy-cost-val">45 € per interaction</span>
                         </div>
                         <input type="range" id="bureaucracy-cost" min="10" max="150" step="5" value="45">
                     </div>
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="suojaosa-removed">Effect of removing protective allowance (150 €)</label>
-                            <span class="slider-val" id="suojaosa-removed-val">Very high</span>
+                            <label for="suojaosa-removed">Impact of Protective Allowance Removal (150 €)</label>
+                            <span class="slider-val" id="suojaosa-removed-val">Critically High</span>
                         </div>
                         <input type="range" id="suojaosa-removed" min="1" max="3" step="1" value="3">
                     </div>
@@ -103,11 +103,11 @@
 
                 <!-- COMMON GOOD PARAMETERS -->
                 <div class="control-group success-border">
-                    <h3 class="group-title success-text"><i class="fa-solid fa-hands-holding-child"></i> Common Good (Flexible Sandbox)</h3>
+                    <h3 class="group-title success-text"><i class="fa-solid fa-hands-holding-child"></i> Common Good Framework (Adaptive Sandbox)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="match-rate">Skills match rate</label>
+                            <label for="match-rate">Skills-to-Opportunity Alignment Rate</label>
                             <span class="slider-val" id="match-rate-val">95%</span>
                         </div>
                         <input type="range" id="match-rate" min="60" max="100" step="5" value="95">
@@ -115,7 +115,7 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="reward-level">Average credit reward</label>
+                            <label for="reward-level">Average Adaptive Credit Incentive</label>
                             <span class="slider-val" id="reward-level-val">120 €</span>
                         </div>
                         <input type="range" id="reward-level" min="40" max="300" step="10" value="120">
@@ -124,11 +124,11 @@
 
                 <!-- SOCIETAL CRISIS COSTS -->
                 <div class="control-group warning-border">
-                    <h3 class="group-title warning-text"><i class="fa-solid fa-triangle-exclamation"></i> Spillover costs (crises)</h3>
+                    <h3 class="group-title warning-text"><i class="fa-solid fa-triangle-exclamation"></i> Quantified Societal Spillover Costs (Crises)</h3>
                     
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="crisis-cost-heavy">Spillover cost per deeply excluded individual</label>
+                            <label for="crisis-cost-heavy">Cost per Deeply Excluded Individual (Long-term)</label>
                             <span class="slider-val" id="crisis-cost-heavy-val">1,000,000 €</span>
                         </div>
                         <input type="range" id="crisis-cost-heavy" min="200000" max="1500000" step="100000" value="1000000">
@@ -136,14 +136,14 @@
 
                     <div class="slider-box">
                         <div class="slider-lbl">
-                            <label for="housing-crisis-cost">Evictions & acute crisis cost</label>
+                            <label for="housing-crisis-cost">Acute Crisis & Eviction Management Cost</label>
                             <span class="slider-val" id="housing-crisis-cost-val">18,000 €</span>
                         </div>
                         <input type="range" id="housing-crisis-cost" min="5000" max="40000" step="1000" value="18000">
                     </div>
                 </div>
 
-                <button id="run-simulation-btn" class="btn primary-btn"><i class="fa-solid fa-play"></i> Run Monte Carlo Simulation</button>
+                <button id="run-simulation-btn" class="btn primary-btn"><i class="fa-solid fa-play"></i> Execute Monte Carlo Simulation</button>
             </form>
         </section>
 
@@ -155,18 +155,18 @@
                 <!-- CURRENT MODEL SUMMARY -->
                 <div class="summary-card danger-card glass-panel">
                     <div class="card-header">
-                        <h3>Current Model (Bureaucracy & Sanctions)</h3>
-                        <span class="badge badge-danger">Sanction-focused</span>
+                        <h3>Current Bureaucratic Model (Sanctions & Control)</h3>
+                        <span class="badge badge-danger">Punitive & Reactive</span>
                     </div>
                     <div class="main-metrics">
                         <div class="metric">
-                            <span class="val-lbl">Net societal outcome</span>
-                            <span class="val text-danger" id="model1-net-cost">Calculating...</span>
+                            <span class="val-lbl">Aggregate Societal Cost</span>
+                            <span class="val text-danger" id="model1-net-cost">Awaiting Simulation...</span>
                         </div>
                         <div class="metric-sub">
-                            <div>Exhausted (KEDS > 19): <strong id="model1-exhausted">0%</strong></div>
-                            <div>Crises (evictions etc.): <strong id="model1-crises">0 pcs</strong></div>
-                            <div>Poverty gap: <strong id="model1-poverty">0%</strong></div>
+                            <div>Individuals Experiencing Exhaustion (KEDS > 19): <strong id="model1-exhausted">0%</strong></div>
+                            <div>Acute Crises (e.g., Evictions): <strong id="model1-crises">0 Incidents</strong></div>
+                            <div>Poverty Gap Index: <strong id="model1-poverty">0%</strong></div>
                         </div>
                     </div>
                 </div>
@@ -174,18 +174,18 @@
                 <!-- COMMON GOOD SUMMARY -->
                 <div class="summary-card success-card glass-panel">
                     <div class="card-header">
-                        <h3>Common Good model (Skills Sandbox)</h3>
-                        <span class="badge badge-success">Smaragd Sandbox</span>
+                        <h3>Common Good Framework (Adaptive Skills Sandbox)</h3>
+                        <span class="badge badge-success">Empowering & Proactive</span>
                     </div>
                     <div class="main-metrics">
                         <div class="metric">
-                            <span class="val-lbl">Net societal outcome</span>
-                            <span class="val text-success" id="model2-net-cost">Calculating...</span>
+                            <span class="val-lbl">Aggregate Societal Benefit</span>
+                            <span class="val text-success" id="model2-net-cost">Awaiting Simulation...</span>
                         </div>
                         <div class="metric-sub">
-                            <div>Exhausted (KEDS > 19): <strong id="model2-exhausted">0%</strong></div>
-                            <div>Crises (minimized): <strong id="model2-crises">0 pcs</strong></div>
-                            <div>Poverty gap reduction: <strong id="model2-poverty-reduction">0%</strong></div>
+                            <div>Individuals Experiencing Exhaustion (KEDS > 19): <strong id="model2-exhausted">0%</strong></div>
+                            <div>Acute Crises (Minimized): <strong id="model2-crises">0 Incidents</strong></div>
+                            <div>Poverty Gap Reduction: <strong id="model2-poverty-reduction">0%</strong></div>
                         </div>
                     </div>
                 </div>
@@ -194,13 +194,13 @@
             <!-- CHARTS GRID -->
             <section class="charts-grid">
                 <div class="chart-card glass-panel">
-                    <h3><i class="fa-solid fa-chart-line"></i> Cumulative total costs to society (€)</h3>
+                    <h3><i class="fa-solid fa-chart-line"></i> Cumulative Socio-Economic Costs to Society (€)</h3>
                     <div class="chart-container">
                         <canvas id="costChart"></canvas>
                     </div>
                 </div>
                 <div class="chart-card glass-panel">
-                    <h3><i class="fa-solid fa-chart-bar"></i> Mental health vs. Employment pace (KEDS development)</h3>
+                    <h3><i class="fa-solid fa-chart-bar"></i> Mental Health Trajectories vs. Employment Pace (KEDS Index)</h3>
                     <div class="chart-container">
                         <canvas id="kedsChart"></canvas>
                     </div>
@@ -210,15 +210,15 @@
             <!-- AGENT STORY LOGS -->
             <section class="agent-story-section glass-panel">
                 <div class="story-header">
-                    <h3><i class="fa-solid fa-receipt"></i> Individual-level dynamic Monte Carlo inspector</h3>
-                    <button id="inspect-agent-btn" class="btn secondary-btn"><i class="fa-solid fa-arrows-rotate"></i> Inspect a new individual</button>
+                    <h3><i class="fa-solid fa-receipt"></i> Individual-Level Dynamic Monte Carlo Inspector</h3>
+                    <button id="inspect-agent-btn" class="btn secondary-btn"><i class="fa-solid fa-arrows-rotate"></i> Re-evaluate Individual Trajectory</button>
                 </div>
                 <div class="story-grid">
                     <div class="agent-profile">
                         <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
                         <div class="profile-details">
-                            <h4 id="agent-type-name">Loading agent...</h4>
-                            <p id="agent-init-desc">Click to run the simulation and see an individual's story.</p>
+                            <h4 id="agent-type-name">Initializing Agent Profile...</h4>
+                            <p id="agent-init-desc">Execute the simulation to visualize an individual's comparative life trajectory.</p>
                             <div class="skills-chips" id="agent-skills-chips">
                                 <!-- Chips inject dynamically -->
                             </div>
@@ -227,16 +227,16 @@
                     <div class="story-comparison">
                         <!-- Model 1 story -->
                         <div class="story-col m1-story">
-                            <h5>Life path under Current Model</h5>
+                            <h5>Life Path Under Current Bureaucratic Model</h5>
                             <ul class="timeline-logs" id="model1-logs">
-                                <li>Waiting for simulation...</li>
+                                <li>Awaiting simulation results...</li>
                             </ul>
                         </div>
                         <!-- Model 2 story -->
                         <div class="story-col m2-story">
-                            <h5>Life path under Common Good</h5>
+                            <h5>Life Path Under Common Good Framework</h5>
                             <ul class="timeline-logs" id="model2-logs">
-                                <li>Waiting for simulation...</li>
+                                <li>Awaiting simulation results...</li>
                             </ul>
                         </div>
                     </div>
@@ -249,87 +249,87 @@
     <div id="manifesti-modal" class="modal-overlay">
         <div class="modal-content glass-panel">
             <div class="modal-header">
-                <h2><i class="fa-solid fa-graduation-cap"></i> Paradigm Shift: From Punishment to Common Good</h2>
+                <h2><i class="fa-solid fa-graduation-cap"></i> Paradigm Shift: From Punitive Control to Collaborative Flourishing</h2>
                 <button id="close-manifesti-btn" class="close-btn">&times;</button>
             </div>
             <div class="modal-body">
-                <h3>1. Introduction: Why update the rules of the social game?</h3>
-                <p>Our current social support architecture spends more energy on control than on meaningful help. This bureaucratic overhead often undermines people's ability to regain sustainable livelihoods.</p>
-                <p>This change is not mere idealism but an economic necessity. Monte Carlo simulations reveal a stark truth: sanction-driven models produce large societal spillover costs compared to asset-based approaches.</p>
+                <h3>1. Introduction: The Imperative for Systemic Re-evaluation</h3>
+                <p>Our prevailing social support architecture, designed for control, inadvertently generates profound systemic friction and undermines human potential. This bureaucratic overhead frequently impedes individuals' pathways to sustainable livelihoods and societal reintegration.</p>
+                <p>This re-evaluation is not merely an ethical consideration but an economic imperative. Advanced Monte Carlo simulations unequivocally demonstrate that sanction-driven models incur significantly higher societal spillover costs compared to asset-based, empowering approaches.</p>
 
-                <h3>2. The current system: "Black box" and punitive atmosphere</h3>
-                <p>The current bureaucratic setup functions like a black box: decisions are impersonal, unpredictable, and frequently based on ad-hoc judgments rather than transparent data.</p>
+                <h3>2. The Current System: Opacity, Coercion, and Cognitive Load</h3>
+                <p>The existing bureaucratic apparatus operates as an opaque "black box," where decisions are often impersonal, unpredictable, and predicated on ad-hoc interpretations rather than transparent, data-driven insights.</p>
                 <ul>
-                    <li><strong>Black-box decision making:</strong> Choices are made behind closed doors without a genuine understanding of individuals' life situations.</li>
-                    <li><strong>Threat-based psychology:</strong> Compulsion and punitive measures activate people's biological threat system, increasing stress and impairing motivation.</li>
-                    <li><strong>Resource waste:</strong> Up to 90% of applicants' energy can be consumed by administrative survival rather than skill development or job search.</li>
+                    <li><strong>Black-box Decision-Making:</strong> Critical life-altering decisions are rendered without genuine insight into individuals' complex life circumstances, fostering distrust and disengagement.</li>
+                    <li><strong>Threat-Based Psychology:</strong> The pervasive use of compulsion and punitive measures activates the human biological threat system, inducing chronic stress, impairing cognitive function, and eroding intrinsic motivation.</li>
+                    <li><strong>Resource Misallocation:</strong> A substantial portion of applicants' cognitive and emotional energy, potentially up to 90%, is consumed by navigating administrative complexities and ensuring basic survival, rather than investing in skill development or proactive job search.</li>
                 </ul>
 
-                <h3>3. Common Good and skills thinking: People as societal agents</h3>
-                <p>The Common Good paradigm treats individuals as assets, not costs. The system becomes an enabling network rather than an architecture of control.</p>
+                <h3>3. The Common Good Framework: Human Capital as Societal Asset</h3>
+                <p>The Common Good paradigm fundamentally redefines individuals as invaluable societal assets, not liabilities. This framework transforms the system into an enabling, adaptive network, replacing an architecture of control with one of collaborative support.</p>
                 <ul>
-                    <li><strong>Agent-based approach:</strong> Individuals act as active societal agents guided by intrinsic motivation.</li>
-                    <li><strong>Skills-first model:</strong> Recognition is based on micro-skills and lived experience rather than rigid formal degrees.</li>
-                    <li><strong>Targeted rewards:</strong> Replace blunt cash cuts with credits that match an individual's real needs (e.g. childcare, transport vouchers).</li>
+                    <li><strong>Agent-Based Empowerment:</strong> Individuals are recognized and supported as active, self-directed societal agents, guided by intrinsic motivation and agency.</li>
+                    <li><strong>Skills-First Profiling:</strong> Emphasis shifts from rigid formal qualifications to comprehensive recognition of micro-skills, transferable competencies, and lived experience, fostering dynamic human capital development.</li>
+                    <li><strong>Adaptive Credit Incentives:</strong> Blunt, punitive financial cuts are replaced with targeted, flexible credit incentives that align precisely with an individual's specific needs (e.g., specialized training vouchers, childcare support, transportation subsidies).</li>
                 </ul>
 
-                <h3>4. Comparative analysis: Old vs. New system</h3>
+                <h3>4. Comparative Analysis: Legacy vs. Evolved Systemic Outcomes</h3>
                 <div class="table-container">
                     <table class="modal-table">
                         <thead>
                             <tr>
                                 <th>Dimension</th>
-                                <th>Current punitive bureaucracy</th>
-                                <th>Common Good paradigm</th>
+                                <th>Current Punitive Bureaucracy</th>
+                                <th>Common Good Adaptive Framework</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><strong>Guidance</strong></td>
-                                <td>Compulsion and threat of punishment</td>
-                                <td>Voluntary participation and enabling support</td>
+                                <td><strong>Guidance Mechanism</strong></td>
+                                <td>Compulsion, threat of punitive sanctions, and compliance enforcement.</td>
+                                <td>Voluntary, proactive participation, and empowering, tailored support.</td>
                             </tr>
                             <tr>
-                                <td><strong>Skills recognition</strong></td>
-                                <td>Formal qualifications and rigid procedures</td>
-                                <td>Skills thinking and micro-profiles</td>
+                                <td><strong>Skills Recognition</strong></td>
+                                <td>Rigid formal qualifications, standardized procedures, and credentialism.</td>
+                                <td>Holistic skills profiling, micro-credentialing, and recognition of experiential learning.</td>
                             </tr>
                             <tr>
-                                <td><strong>Decision making</strong></td>
-                                <td>Opaque "black box" decisions</td>
-                                <td>Open-data, transparent processes</td>
+                                <td><strong>Decision-Making Transparency</strong></td>
+                                <td>Opaque "black box" processes, arbitrary interpretations, and limited accountability.</td>
+                                <td>Open-data principles, transparent algorithms, and collaborative, human-centered processes.</td>
                             </tr>
                             <tr>
-                                <td><strong>Psychological effect</strong></td>
-                                <td>Shame, exhaustion (KEDS ≥ 19)</td>
-                                <td>Motivation, empowerment and constructive pathways</td>
+                                <td><strong>Psychological Impact</strong></td>
+                                <td>Systemic shame, chronic exhaustion (KEDS ≥ 19), and learned helplessness.</td>
+                                <td>Enhanced motivation, empowerment, psychological safety, and constructive pathways.</td>
                             </tr>
                             <tr>
-                                <td><strong>Economic effect</strong></td>
-                                <td>Large spillover costs (e.g. 27.7 M€)</td>
-                                <td>Targeted resource allocation (e.g. 4.5 M€)</td>
+                                <td><strong>Economic Efficiency</strong></td>
+                                <td>Significant long-term spillover costs (e.g., 27.7 M€ due to crises).</td>
+                                <td>Optimized resource allocation, minimized crisis intervention costs (e.g., 4.5 M€).</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                <h3>5. Case example: The hidden potential of a carpenter</h3>
-                <p>How does system change alter one person's life path? Consider a carpenter whose physical capacity has diminished:</p>
+                <h3>5. Illustrative Case Study: Unlocking the Latent Potential of a Master Carpenter</h3>
+                <p>How does a systemic paradigm shift fundamentally alter an individual's life trajectory? Consider the case of a master carpenter whose physical capacity has diminished:</p>
                 <ul>
-                    <li><strong>Current model:</strong> Diagnosed as unable to work, directed to permanent disability benefits and treated as a cost.</li>
-                    <li><strong>Common Good model:</strong> The skills profile recognizes transferable abilities (mentoring, design, small-scale production) and connects the individual to roles that utilize them.</li>
-                    <li><strong>AI-assisted matching:</strong> The system finds a 98% match to a youth workshop instructor role. The carpenter regains purpose and income.</li>
+                    <li><strong>Under the Current Model:</strong> Diagnosed as permanently unable to perform manual labor, channeled into long-term disability benefits, and categorized as a perpetual societal cost.</li>
+                    <li><strong>Under the Common Good Framework:</strong> A comprehensive skills profile identifies transferable competencies (e.g., mentorship, design, precision fabrication, project management). The system proactively connects the individual to roles that leverage these refined abilities.</li>
+                    <li><strong>AI-Assisted Matching & Outcome:</strong> The system identifies a 98% skills-match for a youth vocational workshop instructor position. The carpenter not only regains purpose and income but also contributes invaluable expertise to the next generation, transforming a potential long-term cost into a significant societal asset.</li>
                 </ul>
 
-                <h3>6. Systemic "Winner-Winner": Who benefits and why?</h3>
+                <h3>6. Systemic "Winner-Winner": Maximizing Collective Prosperity</h3>
                 <ul>
-                    <li><strong>Individuals:</strong> Reduced shame and higher motivation — a non-punitive system unlocks potential.</li>
-                    <li><strong>Employers:</strong> Access to genuine skills without sifting through coerced applications.</li>
-                    <li><strong>Society:</strong> Resource efficiency improves dramatically when evictions, hunger, and mental health crises are avoided.</li>
+                    <li><strong>Individuals:</strong> Experience profound reduction in shame, elevated motivation, and restored agency – a non-punitive system unlocks inherent human potential and fosters flourishing.</li>
+                    <li><strong>Employers:</strong> Gain access to genuinely motivated and appropriately skilled talent pools, bypassing the inefficiencies of coerced applications and fostering optimal workforce alignment.</li>
+                    <li><strong>Society:</strong> Achieves dramatic improvements in resource efficiency and ecosystemic resilience by proactively preventing evictions, mitigating food insecurity, and addressing mental health crises, leading to a more stable and productive populace.</li>
                 </ul>
 
-                <h3>7. Conclusion: Toward unity thinking</h3>
-                <p>The Common Good model is more than bureaucracy lightening; it is a shift toward unity thinking where society and individual thrive together.</p>
+                <h3>7. Conclusion: Towards a Future of Unity and Collective Thriving</h3>
+                <p>The Common Good framework transcends mere bureaucratic streamlining; it represents a fundamental shift towards unity thinking. It is a vision where societal structures are designed to foster symbiotic relationships, enabling both the individual and the collective to thrive in an interconnected ecosystem of mutual support and progress.</p>
             </div>
         </div>
     </div>
@@ -337,9 +337,9 @@
     <!-- FOOTER -->
     <footer class="app-footer">
         <div class="footer-content">
-            <p>Common Good Project — Monte Carlo Audit Framework</p>
+            <p>The Common Good Project — Advanced Monte Carlo Audit Framework</p>
             <div class="footer-badge">
-                <i class="fa-solid fa-certificate"></i> Verified by RUXI | Precision Co-Pilot Engineer
+                <i class="fa-solid fa-certificate"></i> Methodological Integrity Verified by RUXI | Precision Co-Pilot Engineer
             </div>
         </div>
     </footer>

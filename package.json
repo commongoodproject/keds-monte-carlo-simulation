@@ -1,0 +1,15 @@
+{
+  "name": "keds-monte-carlo-simulation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Monte Carlo simulator dashboard (index.html + app.js).",
+  "type": "commonjs",
+  "scripts": {
+    "start": "npx serve -l 8080 .",
+    "test": "echo \"No automated tests configured.\" && exit 0"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
+

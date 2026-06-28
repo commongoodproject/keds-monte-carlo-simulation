@@ -40,6 +40,8 @@ body {
     position: relative;
     overflow-x: hidden;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 /* Ambient glow in background */
 .glow-bg {
@@ -70,6 +72,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    flex: 1;
 }
 .icon-pulse {
     font-size: 2.2rem;
@@ -116,6 +119,38 @@ body {
 .h-stat-box .val.danger {
     color: var(--accent-red);
 }
+/* RUXI Verified Badge */
+.ruxi-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.9rem;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: help;
+    transition: var(--transition-fast);
+}
+.ruxi-badge:hover {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+.ruxi-badge i {
+    font-size: 0.9rem;
+}
+.badge-text {
+    display: none;
+}
+@media (min-width: 1400px) {
+    .badge-text {
+        display: inline;
+    }
+}
 /* Glassmorphism panel style */
 .glass-panel {
     background: var(--panel-glass);
@@ -134,6 +169,7 @@ body {
     padding: 1.8rem 2.5rem;
     max-width: 1600px;
     margin: 0 auto;
+    flex: 1;
 }
 /* Control Panel styles */
 .control-panel {
@@ -485,11 +521,36 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* App Footer */
 .app-footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem 2.5rem;
     font-size: 0.75rem;
     color: var(--text-muted);
     border-top: 1px solid var(--panel-border);
     background: rgba(9, 10, 16, 0.9);
+    margin-top: auto;
+}
+.footer-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.footer-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.7rem;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 12px;
+    color: var(--accent-blue);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+.footer-badge i {
+    font-size: 0.8rem;
 }
 /* Animations */
 @keyframes pulseIcon {
@@ -514,6 +575,18 @@ input[type="range"]::-webkit-slider-thumb:hover {
 @media (max-width: 768px) {
     .stats-grid, .charts-grid, .story-comparison, .story-grid {
         grid-template-columns: 1fr;
+    }
+    .app-header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .header-stats {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .ruxi-badge {
+        width: 100%;
+        justify-content: center;
     }
 }
 /* ==========================================
